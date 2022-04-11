@@ -1,0 +1,16 @@
+/* fonts */
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/vazir.eot');
+    src: url('../fonts/vazir.ttf') format('truetype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff');
+}
+
+body input {
+    font-family: Vazirmatn;
+}
+
+div.carousel-item img {
+    height: 600px;
+    object-fit: cover;
+}
