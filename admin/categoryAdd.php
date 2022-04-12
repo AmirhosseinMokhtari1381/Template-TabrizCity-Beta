@@ -4,7 +4,7 @@ if (!$_SESSION['UserName']) {
   header('location:../login.php');
 }
 ?>
-<?php include_once('index.php'); ?>
+<?php include_once('./include/header.php'); ?>
 <div class="container col-12 col-sm-6 mt-3">
   <h2>افزودن دسته‌ی جدید</h2>
   <hr>

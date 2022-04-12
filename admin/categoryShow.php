@@ -4,7 +4,7 @@ if (!$_SESSION['UserName']) {
   header('location:../login.php');
 }
 ?>
-<?php include_once('index.php'); ?>
+<?php include_once('./include/header.php'); ?>
 <?php
 require_once('./include/config.php');
 $sql = "SELECT * FROM category";
@@ -25,13 +25,13 @@ $result = $conn->query($sql);
     </thead>
     <tbody>
       <?php
-      while ($row = $result->fetch_assoc() ) {
+      while ($row = $result->fetch_assoc()) {
 
       ?>
         <tr>
           <td><?= $row['name'] ?></td>
           <td><?= $row['discription'] ?></td>
-          <td><a href="categoryDelete.php?id=<?= $row['id'] ?>">حذف</a></td>
+          <td ><a href="categoryDelete.php?id=<?= $row['id'] ?>"><img src="../img/icons/trash.svg" alt="Delete" width="30" height="30" ></a></td>
         </tr>
       <?php } ?>
     </tbody>
