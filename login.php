@@ -94,17 +94,26 @@
             <h1 class="h3 mb-3 fw-normal">ورود به سیستم</h1>
 
             <div class="form-floating">
-                <input type="text" class="form-control" id="username" placeholder="نام کاربری خود را وارد کنید" name="username">
+                <input type="text" class="form-control" id="username" value="<?php @$_COOKIE['myusername'] ?>" placeholder="نام کاربری" name="username">
                 <label for="username">نام کاربری</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="pwd" placeholder="رمز عبور را وارد کنید" name="pswd">
+                <input type="password" class="form-control" id="pwd" placeholder="رمز عبور" name="pswd">
                 <label for="pwd">رمز عبور</label>
             </div>
 
             <div class="checkbox mb-3">
                 <label>
-                    <input class="form-check-input" type="checkbox" name="remember" value="remember-me"> یاد آور
+                    <input class="form-check-input" type="checkbox" name="remember" value="remember-me"
+                    <?php 
+                    if(isset ($_COOKIE['myusername'])){
+                        echo 'checked = "checked"';
+                    }else{
+                        echo '';
+                    }
+                    
+                    
+                    ?> > یاد آور
                 </label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit" name="submit">ورود</button>
