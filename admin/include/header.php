@@ -11,7 +11,7 @@
     <!-- Template Main CSS File -->
     <link rel="stylesheet" href="../css/style.css">
 
-    <header class="p-3 mb-3 border-bottom">
+    <header class="p-3 mb-3 border-bottom bg-light">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
@@ -43,7 +43,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="bookshow.php">مشاهده کتاب</a></li>
+                            <li><a class="dropdown-item" href="./index.php">مشاهده کتاب</a></li>
                         </ul>
                     </li>
                 </ul>

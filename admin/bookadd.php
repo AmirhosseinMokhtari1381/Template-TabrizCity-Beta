@@ -9,7 +9,7 @@ if (!$_SESSION['UserName']) {
 <div class="container col-12 col-sm-6 mt-3">
     <h2>افزودن کتاب جدید</h2>
     <hr>
-    <form action="#" method="post">
+    <form action="#" method="post" enctype="multipart/form-data">
         <div class="mb-3 mt-3">
             <label for="name">نام کتاب:</label>
             <input type="text" class="form-control" placeholder="نام کتاب:" name="name">
@@ -40,10 +40,15 @@ if (!$_SESSION['UserName']) {
 </div>
 <?php
 if ($_POST) {
-  $category_id = $_POST['category'];
-  $name = $_POST['name'];
-  $discription = $_POST['discription'];
-  $sql = "INSERT INTO book (category, name, discription) VALUES ('$category_id','$name', '$discription')";
-  mysqli_query($conn, $sql);
+    $target_dir = "../uploads/";
+    $target_file = $target_dir . basename($_FILES["image"]["name"]);
+    move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+
+    $category_id = $_POST['category'];
+    $name = $_POST['name'];
+    $discription = $_POST['discription'];
+    
+    $sql = "INSERT INTO book (category, name, discription, imagepath) VALUES ('$category_id','$name', '$discription','$target_file')";
+    mysqli_query($conn, $sql);
 }
 ?>
