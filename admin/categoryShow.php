@@ -9,9 +9,6 @@ if (!$_SESSION['UserName']) {
 require_once('./include/config.php');
 $sql = "SELECT * FROM category";
 $result = $conn->query($sql);
-
-
-
 ?>
 <<div class="container mt-3">
   <h2>دسته‌بندی کتاب‌ها</h2>

@@ -41,9 +41,7 @@ if (!$_SESSION['UserName']) {
     <?php include_once('./include/header.php'); ?>
 
 
-    <!-- Bootstrap JS Files -->
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/bootstrap.bundle.min.js.map"></script>
+   
 
 </body>
 

@@ -6,12 +6,12 @@ if (!$_SESSION['UserName']) {
 ?>
 <?php include_once('./include/header.php'); ?>
 <div class="container col-12 col-sm-6 mt-3">
-  <h2>افزودن دسته‌ی جدید</h2>
+  <h2>افزودن موضوع جدید</h2>
   <hr>
   <form action="#" method="post">
     <div class="mb-3 mt-3">
-      <label for="name">نام دسته:</label>
-      <input type="text" class="form-control" placeholder="نام دسته" name="name">
+      <label for="name">نام موضوع:</label>
+      <input type="text" class="form-control" placeholder="موضوع" name="name">
     </div>
     <div class="mb-3">
       <div class="form-group">
